@@ -53,7 +53,7 @@ void Predictor::Predict() {
     if (res_out_) {
       std::ofstream o_file(out_file_, std::ofstream::app);
       for (index_t i = 0; i < out.size(); ++i) {
-        o_file << out[i] << "\n";
+        o_file << matrix->Y[i] << " " <<  out[i] << "\n";
       }
     }
   }
